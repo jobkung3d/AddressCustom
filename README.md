@@ -1,10 +1,10 @@
-# react-thailand-address-typeahead (jQuery free)
+# react-thailand-address-typeahead (Custom)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 custom by: jobkung3d
 
 This project fork from 
-[jquery.Thailand.js](https://github.com/earthchie/jquery.Thailand.js)
+[react-thailand-address-typeahead](https://github.com/zapkub/react-thailand-address-typeahead)
 
 ## Demo
 [Example with storybook](http://zapkub.github.io/react-thailand-address)
