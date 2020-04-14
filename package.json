@@ -72,7 +72,7 @@
     "style-loader": "^0.16.1",
     "webpack": "^2.3.3"
   },
-  "homepage": "https://github.com/zapkub/react-thailand-address-typeahead#readme",
+  "homepage": "https://github.com/jobkung3d/AddressCustom#readme",
   "jest": {
     "transform": {
       "\\.js$": "./__test__/flow-type-strip.register.js"
@@ -80,7 +80,7 @@
   },
   "license": "MIT",
   "main": "dist/index.js",
-  "name": "react-thailand-address-typeahead",
+  "name": "react-thailand-address-typeahead-custom",
   "peerDependencies": {
     "react": "15.4.0",
     "react-dom": "15.5.3"
