@@ -41,6 +41,7 @@ var preprocess = function preprocess(data) {
       });
     });
   });
+  console.log(expanded)
   return expanded;
 };
 var DB = new JQL(preprocess(require('../data.json')));

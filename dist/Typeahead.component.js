@@ -15,7 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Typeahead = (0, _recompose.compose)((0, _recompose.defaultProps)({
   onChange: function onChange() {},
   option: [],
-  maxVisible: 10
+  maxVisible: 99
 }), (0, _recompose.withState)('open', 'setOpen', false))(function (props) {
   return _react2.default.createElement(
     'div',
@@ -41,7 +41,7 @@ var Typeahead = (0, _recompose.compose)((0, _recompose.defaultProps)({
     }) : null,
     props.open && props.options.length && props.value.length ? _react2.default.createElement(
       'ul',
-      { className: 'typeahead-selector' },
+      { className: 'typeahead-selector', style: {maxHeight:300, overflowY:'scroll'}},
       props.options.filter(function (item, i) {
         return i < props.maxVisible;
       }).map(function (item, i) {

@@ -32,9 +32,15 @@ var AddressForm = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (AddressForm.__proto__ || Object.getPrototypeOf(AddressForm)).call(this, props));
     
     _this.setAddressObj = _this.setAddressObj.bind(_this);
+    _this.setAddressState = _this.setAddressState.bind(_this);
 
     _this.state = {   
-      addressObj: undefined,                                        //  Add
+      addressObj: {                           
+        d: '',                                //Add ล่าสุด
+        a: '',                                //Add ล่าสุด
+        p: '',                                //Add ล่าสุด
+        z: '',                                //Add ล่าสุด
+      },                                                             //  Add
       defaultAddressObj: {                                          //  Add
         d : this.props.d?this.props.d:'',                           //  Add
         a : this.props.a?this.props.a:'',                           //  Add
@@ -45,18 +51,26 @@ var AddressForm = function (_React$Component) {
 
     return _this;
   }
-
+  
   _createClass(AddressForm, [{
     key: 'setAddressObj',
     value: function setAddressObj(addressObj) {
       this.setState({ addressObj: addressObj });
-    }
+    },
   },
+  {                                           //Add ล่าสุด
+    key: 'setAddressState',                   //Add ล่าสุด
+    value: function setAddressState(obj) {    //Add ล่าสุด
+      let fields = this.state.addressObj;     //Add ล่าสุด
+      fields[obj.fieldType] = obj.value;      //Add ล่าสุด
+      this.setState({ fields });              //Add ล่าสุด
+    },                                        //Add ล่าสุด
+  },                                          //Add ล่าสุด
   {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
       this.setState({ 
-        defaultAddressObj: {                                          //  Add
+        defaultAddressObj: {                                        //  Add
           d : nextProps.d?nextProps.d:'',                           //  Add
           a : nextProps.a?nextProps.a:'',                           //  Add
           p : nextProps.p?nextProps.p:'',                           //  Add
@@ -109,6 +123,10 @@ var AddressForm = function (_React$Component) {
                 _this2.setAddressObj(result);
                 _this2.props.onAddressSelected(result);
               },
+              setAddressState: function setAddressState(value){     //Add ล่าสุด
+                _this2.setAddressState(value)                       //Add ล่าสุด
+                _this2.props.onAddressSelected(addressObj);         //Add ล่าสุด
+              },                                                    //Add ล่าสุด
               value:  addressObj?addressObj[_finder.fieldsEnum[key]]:'',
               defaultValue: defaultAddressObj?defaultAddressObj[_finder.fieldsEnum[key]]:'',
               onClearDefaultValue: function(){

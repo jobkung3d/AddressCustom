@@ -33,10 +33,12 @@ var AddressTypeaheadComponent = function AddressTypeaheadComponent(props) {
     displayOption: props.renderResult,
     filterOption: fieldType,
     options: options,
-    maxVisible: 5,
+    maxVisible: 99,
     value: defaultValue?defaultValue:searchStr,
     onChange: function onChange(e) {
       props.onClearDefaultValue()
+      props.setAddressState({fieldType: fieldType, value: e.target.value})
+      console.log( 'e.target: ',e.target.value)
       return setSearchStr(e.target.value);
     },
     onOptionSelected: function onOptionSelected(option) {
